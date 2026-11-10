@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Clothing Analyzer · Oxford AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="analyzer-card">
+    <h1>
+      Clothing Analyzer
+      <span>Oxford AI</span>
+    </h1>
+    <div class="subhead">Describe · Brand · Price range (₱)</div>
+
+    <!-- Upload area -->
+    <div class="upload-area">
+      <div class="file-input-wrapper" id="fileWrapper">
+        <input type="file" id="imageInput" accept="image/jpeg,image/png,image/gif,image/webp">
+        <div class="upload-icon">👕</div>
+        <div class="upload-text">Tap to upload a clothing photo</div>
+        <div class="upload-hint">JPEG, PNG, GIF, WebP · max 5MB</div>
+      </div>
+
+      <!-- image preview -->
+      <div class="preview-container" id="previewContainer">
+        <img id="previewImage" class="image-preview hidden" src="#" alt="clothing preview">
+      </div>
+    </div>
+
+    <!-- action buttons -->
+    <div class="action-buttons">
+      <button class="btn btn-secondary" id="clearBtn" type="button">✕ Clear</button>
+      <button class="btn btn-primary" id="analyzeBtn" type="button">🔍 Analyze</button>
+      <button class="btn btn-cancel hidden" id="cancelBtn" type="button">Cancel</button>
+    </div>
+
+    <!-- status message (errors, info) -->
+    <div id="statusMessage" class="status-message hidden"></div>
+
+    <!-- Result section -->
+    <div class="result-section" id="resultSection">
+      <div class="result-placeholder" id="placeholderMessage">
+        <span>📸</span>
+        Upload a clothing image, then tap Analyze
+      </div>
+
+      <div id="resultContent" class="hidden">
+        <div class="result-item">
+          <!-- Description row -->
+          <div class="result-row">
+            <div class="result-label">Description</div>
+            <div class="result-value description-text" id="descOutput">—</div>
+          </div>
+
+          <!-- Brand row -->
+          <div class="result-row">
+            <div class="result-label">Brand</div>
+            <div class="result-value" id="brandOutput">—</div>
+          </div>
+
+          <!-- Price row -->
+          <div class="result-row">
+            <div class="result-label">Price range</div>
+            <div class="result-value" id="priceOutput">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footnote">Powered by Oxford AI · Available in the Philippines only</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
